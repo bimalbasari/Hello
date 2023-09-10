@@ -41,10 +41,6 @@ function getUserDataFromReq(req) {
     });
 }
 
-app.get('/test', (req, res) => {
-    res.json('test ok');
-});
-
 
 
 app.post('/register', async (req, res) => {
@@ -60,7 +56,7 @@ app.post('/register', async (req, res) => {
         res.json(userDoc);
 
     } catch (error) {
-        res.status(422).json(error);
+        res.status(501).json(error);
     }
 
 });
